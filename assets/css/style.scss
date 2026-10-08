@@ -1,0 +1,71 @@
+---
+---
+$content-width: 820px;
+$base-font-family: "Noto Sans Thai", -apple-system, "Segoe UI", sans-serif;
+$base-font-size: 17px;
+$text-color: #2b2b33;
+$brand-color: #e8590c;
+
+@import "minima";
+
+body { background: #faf8f5; line-height: 1.8; }
+
+h1, h2, h3, h4, .site-title, .post-title, .post-link {
+  font-family: "Prompt", "Noto Sans Thai", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+/* ส่วนหัวเว็บ */
+.site-header {
+  background: #fff;
+  border: 0;
+  border-bottom: 3px solid $brand-color;
+  padding: 6px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.site-title, .site-title:visited { color: $brand-color; font-size: 24px; }
+
+/* หน้าแรก: รายการบทความเป็นการ์ด */
+.post-list { margin-left: 0; list-style: none; }
+.post-list > li {
+  background: #fff;
+  border-radius: 14px;
+  padding: 22px 26px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.06);
+  transition: transform .15s, box-shadow .15s;
+}
+.post-list > li:hover { transform: translateY(-3px); box-shadow: 0 8px 22px rgba(0,0,0,.10); }
+.post-link { font-size: 22px; color: #2b2b33; }
+.post-meta { color: #888; font-size: 14px; }
+
+/* หน้าบทความ */
+.post { background: #fff; border-radius: 14px; padding: 30px 34px; box-shadow: 0 2px 10px rgba(0,0,0,.06); }
+.post-title { font-size: 30px; line-height: 1.4; }
+.post-content h2 { margin-top: 36px; padding-left: 12px; border-left: 5px solid $brand-color; font-size: 24px; }
+.post-content h3 { font-size: 19px; margin-top: 24px; }
+.post-content ul { margin-bottom: 18px; }
+.post-content img { border-radius: 10px; }
+
+/* ปุ่มลิงก์แอฟฟิลิเอต (จับจาก rel="sponsored") */
+.post-content a[rel~="sponsored"] {
+  display: inline-block;
+  background: $brand-color;
+  color: #fff;
+  padding: 12px 26px;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(232,89,12,.35);
+  transition: background .15s, transform .15s;
+}
+.post-content a[rel~="sponsored"]:hover { background: #c94a08; transform: translateY(-2px); }
+.post-content a[rel~="sponsored"] strong { color: #fff; }
+
+/* มือถือ */
+@media (max-width: 600px) {
+  .post { padding: 20px 18px; }
+  .post-title { font-size: 25px; }
+}
