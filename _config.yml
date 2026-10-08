@@ -1,0 +1,9 @@
+title: Say Goods Buy
+description: รีวิวของใช้ในบ้านในครัวตัวเด็ด คัดมาเน้นๆ รีวิวเจาะลึกก่อนตัดสินใจซื้อ
+lang: th
+url: "https://saygoodsbuy.github.io"
+theme: minima
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
